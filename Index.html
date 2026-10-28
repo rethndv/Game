@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXPLAY - Gaming Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">NEX<span>PLAY</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav id="navMenu">
+      <a href="#home">Beranda</a>
+      <a href="#games">Game</a>
+      <a href="#about">Tentang</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="badge">🔥 GAMING ZONE</span>
+        <h1>LEVEL UP<br>YOUR <span>GAME.</span></h1>
+        <p>Temukan game favoritmu dan tantang kemampuanmu.
+           Dunia gaming dimulai dari sini!</p>
+        <a href="#games" class="btn">Jelajahi Game →</a>
+      </div>
+      <div class="hero-art">
+        <div class="game-icon">🎮</div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="floating f1">⚡</span>
+        <span class="floating f2">👾</span>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><h2>03+</h2><p>Mini Games</p></div>
+      <div><h2>100%</h2><p>Gratis dimainkan</p></div>
+      <div><h2>24/7</h2><p>Siap bermain</p></div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">PILIH PERMAINANMU</span>
+          <h2>Game <span>Populer</span></h2>
+        </div>
+        <span class="online"><i></i> PLAY NOW</span>
+      </div>
+
+      <div class="search-box">
+        <span>🔎</span>
+        <input id="searchInput" type="text"
+               placeholder="Cari game favoritmu...">
+      </div>
+
+      <div class="categories">
+        <button class="category active" data-category="all">Semua</button>
+        <button class="category" data-category="arcade">Arcade</button>
+        <button class="category" data-category="action">Action</button>
+        <button class="category" data-category="casual">Casual</button>
+      </div>
+
+      <div class="game-grid" id="gameGrid">
+
+        <article class="game-card" data-category="arcade"
+                 data-name="neon click">
+          <div class="game-cover cover-one">
+            <span class="game-emoji">🎯</span>
+            <span class="tag">ARCADE</span>
+          </div>
+          <div class="game-info">
+            <h3>Neon Click</h3>
+            <p>Uji kecepatan jari dan raih skor tertinggi.</p>
+            <div class="game-bottom">
+              <span>⭐ 4.9</span>
+              <button class="play-btn" data-game="click">Mainkan →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="action"
+                 data-name="space shooter">
+          <div class="game-cover cover-two">
+            <span class="game-emoji">🚀</span>
+            <span class="tag">ACTION</span>
+          </div>
+          <div class="game-info">
+            <h3>Space Shooter</h3>
+            <p>Hancurkan meteor dan lindungi pesawatmu.</p>
+            <div class="game-bottom">
+              <span>⭐ 4.8</span>
+              <button class="play-btn" data-game="space">Mainkan →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card" data-category="casual"
+                 data-name="tebak angka">
+          <div class="game-cover cover-three">
+            <span class="game-emoji">🧠</span>
+            <span class="tag">CASUAL</span>
+          </div>
+          <div class="game-info">
+            <h3>Tebak Angka</h3>
+            <p>Tebak angka rahasia dengan percobaan terbatas.</p>
+            <div class="game-bottom">
+              <span>⭐ 4.7</span>
+              <button class="play-btn" data-game="guess">Mainkan →</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p id="emptyMessage" hidden>Game tidak ditemukan.</p>
+    </section>
+
+    <section class="about" id="about">
+      <span class="eyebrow">WHY NEXPLAY?</span>
+      <h2>Gaming Lebih Seru,<br><span>Tanpa Batas.</span></h2>
+      <p>NEXPLAY adalah website mini game sederhana untuk
+         menemani waktu luangmu. Pilih permainan, kumpulkan
+         skor, dan pecahkan rekor pribadimu!</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">NEX<span>PLAY</span></a>
+    <p>© 2026 NEXPLAY. Dibuat untuk para gamer.</p>
+  </footer>
+
+  <!-- Jendela permainan -->
+  <div class="modal" id="gameModal">
+    <div class="modal-box">
+      <button class="close-btn" id="closeModal">✕</button>
+      <div id="gameContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
